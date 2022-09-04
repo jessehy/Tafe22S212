@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Calculator.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<StackPanel Background="AliceBlue">
+		<StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<TextBlock x:Name="TitleTxtBlock" Text="Universal Calculator" HorizontalAlignment="Center" FontSize="50" Margin="15"/>
+				<Image Source="/abacus.PNG"/>
+			</StackPanel>
+			
+		</StackPanel>
+		<Button x:Name="mathCalculatorButton" HorizontalAlignment="Center" Content="Math Calculator" Width="250" Height="80" FontSize="20" Margin="15 30 15 15"/>
+		<Button x:Name="mortgageCalculatorButton" HorizontalAlignment="Center" Content="Mortgage Calculator" Width="250" Height="80" FontSize="20" Margin="15"/>
+		<Button x:Name="currencyCalculatorButton" HorizontalAlignment="Center" Content="Currency Calculator" Width="250" Height="80" FontSize="20" Margin="15"/>
+		<Button x:Name="exitButton" HorizontalAlignment="Center" Content="Exit" Width="200" Height="80" FontSize="20" Margin="15"/>
+	</StackPanel>
+</Page>
