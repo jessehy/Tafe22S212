@@ -4,3 +4,6 @@ insert_final_newline = false
 indent_style = tab
 indent_size = 4
 trim_trailing_whitespace = true
+
+# IDE0055: Fix formatting
+dotnet_diagnostic.IDE0055.severity = none
