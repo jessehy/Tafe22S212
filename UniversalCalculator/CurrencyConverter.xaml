@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Calculator.CurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Grid Background="#4A9130" SizeChanged="FormName_SizeChanged">
+
+		<StackPanel Background="AliceBlue">
+			<StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+					<TextBlock x:Name="TitleTxtBlock" Text="Currency Conversion Calculator" HorizontalAlignment="Center" FontSize="36" FontWeight="Black" Margin="20,80,10,10"/>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<TextBlock x:Name="lblAmount" Text="Amount" Width="150" FontSize="28" Margin="40,20,100,10" />
+				<TextBlock x:Name="lblFrom" Text="From" Width="100" FontSize="28" Margin="10,20,90,10" />
+				<TextBlock x:Name="lblTo" Text="To" Width="100" FontSize="28" Margin="40,20,10,10" />
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="30,5">
+				<StackPanel Orientation="Horizontal">
+					<!-- text box to capture the amount to be converted -->
+					<TextBox x:Name="txtAmount" PlaceholderText="Enter amount" Width="220" Margin="15,5,5,5"/>
+					<!-- dropdown combo to select the currency to be converted from  -->
+					<ComboBox x:Name="cmbFrom" PlaceholderText="Select currency" Width="230" Margin="5,5" SelectedIndex="0">
+						<x:String>USD - US Dollar</x:String>
+						<x:String>EUR - Euro</x:String>
+						<x:String>GBP - British Pound</x:String>
+						<x:String>INR - Indian Rupee</x:String>
+					</ComboBox>
+					<!-- dropdown combo to select the currency to be converted to  -->
+					<ComboBox x:Name="cmbTo" PlaceholderText="Select currency" Width="230" Margin="10,5" SelectedIndex="0">
+						<x:String>US Dollar</x:String>
+						<x:String>EUR - Euro</x:String>
+						<x:String>GBP - British Pound</x:String>
+						<x:String>INR - Indian Rupee</x:String>
+					</ComboBox>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<TextBlock x:Name="lblDisplayAmount" Text="" FontSize="15" Margin="50,10" />
+			</StackPanel>
+			<StackPanel>
+				<TextBlock x:Name="lblConvertedAmount" Text="" FontSize="22" Margin="50,10"/>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock x:Name="lblFromCurrency" Text="" FontSize="15" Margin="50,10"/>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock x:Name="lblToCurrency" Text="" FontSize="15" Margin="50,10"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button x:Name="btnCurrencyConversion" Content="Currency Conversion" Width="180" Height="40" Margin="5,10" FontWeight="Bold" Click="btnCurrencyConversion_Click" />
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button x:Name="btnExit" Content="Exit" Width="100" Height="40" FontWeight="Bold" Click="btnExit_Click"/>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Page>
